@@ -1,248 +1,545 @@
-export default function BlackfireWebsiteRedesign() {
-  const capabilities = [
-    {
-      title: "Cybersecurity & Compliance Consulting",
-      text: "RMF execution, SSP and POA&M development, security control implementation, vulnerability management, STIG and SCAP alignment, and audit-readiness support for regulated environments.",
-    },
-    {
-      title: "Enterprise Architecture & Modernization",
-      text: "Secure enterprise design for hybrid environments, infrastructure modernization planning, technology roadmaps, and architecture decisions that balance mission, risk, and operational reality.",
-    },
-    {
-      title: "Network & Infrastructure Strategy",
-      text: "Architecture guidance for routing, switching, firewalls, VPNs, identity, segmentation, and resilient connectivity across multi-site environments.",
-    },
-    {
-      title: "Application & Automation Advisory",
-      text: "Consulting for custom applications, automation, compliance workflows, and operational tools that improve reporting, visibility, and execution.",
-    },
-  ];
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline';
+    connect-src 'self';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    object-src 'none';
+    upgrade-insecure-requests;
+  " />
+  <title>Blackfire Systems LLC — Cybersecurity, Architecture, and Compliance Consulting</title>
+  <meta name="description" content="Blackfire Systems LLC provides cybersecurity, enterprise architecture, compliance, and modernization consulting for regulated and mission-critical environments." />
+  <style>
+    :root{
+      --bg:#070707;
+      --panel:#0f0f12;
+      --panel2:#121217;
+      --text:#f3f4f6;
+      --muted:#b7bcc6;
+      --line:#232330;
+      --accent:#d43c2c;
+      --accent2:#f46a1f;
+      --shadow: 0 18px 45px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
 
-  const highlights = [
-    "Architected SCIENET, an industrial network supporting Industry 4.0 initiatives at Tinker AFB.",
-    "Led ATHENA enterprise network architecture connecting multiple Air Force bases in a unified secure design.",
-    "Supported RMF, NIST 800-53, and NIST 800-171 aligned compliance efforts across defense-focused environments.",
-    "Built automation and assessment capabilities for STIG compliance, vulnerability management, and security monitoring.",
-    "Delivered consulting across enterprise networking, hybrid infrastructure, cybersecurity governance, and modernization planning.",
-  ];
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(212,60,44,.22), transparent 55%),
+        radial-gradient(900px 500px at 80% 15%, rgba(244,106,31,.18), transparent 55%),
+        linear-gradient(180deg, #050505, #070707 40%, #060606);
+      color:var(--text);
+      line-height:1.5;
+    }
 
-  const experience = [
-    {
-      role: "Solutions Architect / Senior Technical Consultant",
-      org: "Muscogee Business Services",
-      period: "2025 – Present",
-      body: "Delivers consulting across secure enterprise networks, RMF compliance, hybrid infrastructure, modernization planning, and custom technical solutions for government and commercial clients.",
-    },
-    {
-      role: "Enterprise Architect",
-      org: "Delaware Nation Industries",
-      period: "2024 – 2025",
-      body: "Led enterprise architecture and secure network design efforts supporting the ATHENA network and multi-base modernization initiatives.",
-    },
-    {
-      role: "Information Technology Specialist",
-      org: "Department of Defense",
-      period: "2020 – 2024",
-      body: "Designed, implemented, and optimized secure infrastructure and industrial networking capabilities while supporting compliance-driven mission environments.",
-    },
-    {
-      role: "Software Developer",
-      org: "Webco Industries",
-      period: "2018 – 2020",
-      body: "Built business applications, data solutions, and secure web capabilities across modern development stacks and enterprise systems.",
-    },
-  ];
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    .section{padding:72px 0;border-top:1px solid rgba(255,255,255,.06)}
 
-  const credentials = [
-    "MSIT",
-    "CISSP",
-    "CGRC",
-    "PMP",
-    "CEH",
-    "GSLC",
-    "CCP",
-    "CCA",
-    "Top Secret Clearance",
-  ];
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background: rgba(7,7,7,.72);
+      backdrop-filter: blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;min-width:210px}
+    .brand-name{font-weight:800;letter-spacing:.4px}
+    .brand-sub{font-size:12px;color:var(--muted);margin-top:1px}
+    .navlinks{display:flex;gap:16px;align-items:center}
+    .navlinks a{
+      text-decoration:none;
+      font-size:13px;
+      color:var(--muted);
+      padding:9px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+    .navlinks a:hover{
+      color:var(--text);
+      border-color:rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03)
+    }
+    .cta{
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:12px;
+      background: linear-gradient(135deg, rgba(212,60,44,.95), rgba(244,106,31,.95));
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 14px 35px rgba(212,60,44,.22);
+    }
 
-  const engagement = [
-    "Strategic advisory and architecture review",
-    "Cybersecurity program and compliance consulting",
-    "Technical planning for modernization initiatives",
-    "Assessment-driven recommendations and implementation roadmaps",
-  ];
+    .hero{padding:64px 0 28px;border-top:none}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+    .hero h1{
+      font-size:44px;line-height:1.08;margin:0 0 14px;
+      letter-spacing:-.7px;
+    }
+    .tagline{
+      display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;
+      font-weight:800;color:#fff;margin:0 0 14px;letter-spacing:.2px;
+    }
+    .tag-pill{
+      font-size:12px;color:var(--muted);
+      border:1px solid rgba(255,255,255,.12);
+      padding:6px 10px;border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+    .hero p{color:var(--muted);margin:0 0 18px;font-size:15px;max-width:66ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:14px;
+      text-decoration:none;font-weight:800;font-size:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+    }
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(212,60,44,.95), rgba(244,106,31,.95));
+      border-color:rgba(255,255,255,.18)
+    }
 
-  return (
-    <div className="min-h-screen bg-neutral-950 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(220,38,38,0.18),transparent_30%),radial-gradient(circle_at_top_right,rgba(249,115,22,0.14),transparent_28%),linear-gradient(to_bottom,#0a0a0a,#111111)]" />
-      <div className="relative">
-        <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <div>
-              <div className="text-xl font-black tracking-wide">Blackfire Systems LLC</div>
-              <div className="text-xs text-white/60">Consulting | Cybersecurity | Enterprise Architecture</div>
-            </div>
-            <nav className="hidden gap-6 text-sm text-white/75 md:flex">
-              <a href="#services" className="hover:text-white">Services</a>
-              <a href="#experience" className="hover:text-white">Experience</a>
-              <a href="#credentials" className="hover:text-white">Credentials</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
-            </nav>
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-inner{padding:18px}
+    .panel-title{font-weight:900;letter-spacing:.2px;margin:0 0 10px}
+    .panel-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+    .panel-list li{display:flex;gap:10px;color:var(--muted);font-size:13px}
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: linear-gradient(135deg, rgba(212,60,44,.95), rgba(244,106,31,.95));
+      margin-top:5px;flex:0 0 auto;
+    }
+
+    .kicker{
+      color:var(--accent2);
+      font-weight:900;
+      letter-spacing:.18em;
+      font-size:11px;
+      text-transform:uppercase
+    }
+    .h2{font-size:28px;margin:10px 0 10px;letter-spacing:-.2px}
+    .lead{color:var(--muted);margin:0 0 22px;max-width:80ch}
+
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+
+    .card{
+      padding:18px;border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: 0 16px 40px rgba(0,0,0,.35);
+    }
+    .card .name{font-weight:950;letter-spacing:.2px;margin:0 0 6px;font-size:18px}
+    .card p{color:var(--muted);font-size:13px;margin:0}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:11.5px;font-weight:900;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:#fff;
+      margin:0 0 10px;
+    }
+
+    .timeline{display:grid;gap:14px}
+    .timeline-item{
+      padding:18px;border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+    .timeline-top{
+      display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap
+    }
+    .timeline-role{font-weight:900;font-size:18px;margin:0}
+    .timeline-org{color:#fff;margin:4px 0 0;font-size:14px}
+    .timeline-date{
+      font-size:12px;color:var(--muted);
+      border:1px solid rgba(255,255,255,.10);
+      padding:7px 10px;border-radius:999px;
+      background:rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+    .timeline-item p{color:var(--muted);font-size:13px;margin:12px 0 0}
+
+    .bullets{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+    .bullets li{font-size:13px}
+
+    .credential-wrap{
+      display:flex;flex-wrap:wrap;gap:10px
+    }
+    .credential{
+      font-size:12px;font-weight:800;color:#fff;
+      padding:9px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+    }
+
+    .contact-box{
+      padding:22px;border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(800px 260px at 10% 0%, rgba(212,60,44,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+    }
+
+    footer{padding:34px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+    .footgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
+
+    @media (max-width: 980px){
+      .hero-grid,.grid-4,.grid-3,.grid-2,.footgrid{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    @media (max-width: 560px){
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand" aria-label="Blackfire Systems">
+          <img src="logo.png" alt="Blackfire Systems LLC logo" style="height:34px;width:auto;" />
+          <div>
+            <div class="brand-name">Blackfire Systems LLC</div>
+            <div class="brand-sub">Cybersecurity, Architecture, and Compliance Consulting</div>
           </div>
-        </header>
+        </div>
 
-        <main>
-          <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 md:grid-cols-[1.25fr_0.75fr] md:py-28">
-            <div>
-              <div className="mb-5 inline-flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-orange-300">
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Consulting</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Cybersecurity</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Enterprise Architecture</span>
-              </div>
-              <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-                Trusted consulting shaped by real-world defense, compliance, and infrastructure work.
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/70 md:text-xl">
-                Blackfire Systems helps organizations plan, modernize, and secure critical environments through practical consulting grounded in enterprise architecture, cybersecurity governance, and hands-on delivery experience.
-              </p>
-              <p className="mt-4 max-w-3xl text-base leading-7 text-white/65">
-                Our approach is built around advisory support that reflects proven work across secure network architecture, RMF-aligned compliance, modernization planning, and operationally realistic technical execution.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="rounded-2xl border border-orange-400/40 bg-gradient-to-r from-red-600 to-orange-500 px-6 py-3 text-sm font-bold shadow-2xl shadow-red-950/40 transition hover:scale-[1.01]"
-                >
-                  Schedule a Consultation
-                </a>
-                <a
-                  href="#experience"
-                  className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white/90 transition hover:bg-white/10"
-                >
-                  View Past Work
-                </a>
-              </div>
-            </div>
+        <div class="navlinks" role="navigation" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/30">
-              <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Why Blackfire</div>
-              <div className="mt-4 space-y-4">
-                {highlights.map((item) => (
-                  <div key={item} className="flex gap-3 rounded-2xl border border-white/8 bg-black/20 p-4">
-                    <div className="mt-1 h-2.5 w-2.5 flex-none rounded-full bg-gradient-to-br from-red-500 to-orange-400" />
-                    <p className="text-sm leading-6 text-white/75">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section id="services" className="border-t border-white/10 bg-black/20 py-20">
-            <div className="mx-auto max-w-7xl px-6">
-              <div className="max-w-3xl">
-                <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Consulting Services</div>
-                <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">Built for organizations that need practical guidance, not generic advice.</h2>
-                <p className="mt-5 text-lg leading-8 text-white/70">
-                  Blackfire is positioned as a consulting partner focused on strategy, architecture, compliance, and modernization support. Engagements are structured to provide clear recommendations, defensible decisions, and implementation-ready direction.
-                </p>
-              </div>
-
-              <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                {capabilities.map((item) => (
-                  <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20">
-                    <h3 className="text-xl font-bold leading-7">{item.title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-white/70">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section id="experience" className="py-20">
-            <div className="mx-auto max-w-7xl px-6">
-              <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-                <div>
-                  <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Past Performance</div>
-                  <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">Consulting credibility backed by direct delivery experience.</h2>
-                  <p className="mt-5 text-lg leading-8 text-white/70">
-                    The website shifts from a generic managed-service tone to a consulting-first message grounded in past work across defense, enterprise infrastructure, industrial networking, secure modernization, and software-enabled operations.
-                  </p>
-                </div>
-
-                <div className="space-y-5">
-                  {experience.map((item) => (
-                    <div key={item.role + item.org} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                        <div>
-                          <h3 className="text-xl font-bold">{item.role}</h3>
-                          <p className="mt-1 text-sm font-medium text-orange-300">{item.org}</p>
-                        </div>
-                        <div className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-                          {item.period}
-                        </div>
-                      </div>
-                      <p className="mt-4 text-sm leading-7 text-white/72">{item.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="credentials" className="border-t border-white/10 bg-black/20 py-20">
-            <div className="mx-auto max-w-7xl px-6">
-              <div className="grid gap-8 lg:grid-cols-2">
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-                  <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Credentials</div>
-                  <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Leadership and certifications that support high-trust engagements.</h2>
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    {credentials.map((item) => (
-                      <div key={item} className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-sm font-semibold text-white/80">
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-                  <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">How We Engage</div>
-                  <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">Focused consulting support tailored to risk, scope, and mission needs.</h2>
-                  <div className="mt-6 space-y-4">
-                    {engagement.map((item) => (
-                      <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/8 bg-black/25 p-4">
-                        <div className="mt-1 h-2.5 w-2.5 flex-none rounded-full bg-gradient-to-br from-red-500 to-orange-400" />
-                        <p className="text-sm leading-6 text-white/75">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="contact" className="py-20">
-            <div className="mx-auto max-w-5xl px-6">
-              <div className="rounded-[2rem] border border-orange-400/20 bg-gradient-to-br from-red-950/40 via-black/40 to-orange-950/30 p-8 shadow-2xl shadow-black/40 md:p-12">
-                <div className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Contact</div>
-                <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">Start with a focused conversation.</h2>
-                <p className="mt-5 max-w-3xl text-lg leading-8 text-white/72">
-                  Whether you need architecture guidance, compliance support, modernization planning, or strategic technical consulting, Blackfire can help define the path forward.
-                </p>
-                <div className="mt-8 grid gap-4 md:grid-cols-2">
-                  <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
-                    <div className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">Email</div>
-                    <div className="mt-2 text-lg font-semibold">derrick.looney@blackfiresystemsllc.com</div>
-                  </div>
-                  <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
-                    <div className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">Consulting Focus</div>
-                    <div className="mt-2 text-lg font-semibold">Cybersecurity, Compliance, Enterprise Architecture</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
+        <a class="cta" href="#contact">Schedule a Consultation</a>
       </div>
     </div>
-  );
-}
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap" id="top">
+      <div class="hero-grid">
+        <div>
+          <div class="tagline">
+            <span class="tag-pill">Cybersecurity Consulting</span>
+            <span class="tag-pill">Enterprise Architecture</span>
+            <span class="tag-pill">Compliance & Modernization</span>
+          </div>
+          <h1>Practical consulting for secure, compliant, and mission-critical environments.</h1>
+          <p>
+            Blackfire Systems LLC provides consulting services focused on cybersecurity, enterprise architecture,
+            compliance, and modernization strategy. Our work is grounded in real-world delivery across defense,
+            enterprise infrastructure, secure networking, and compliance-driven operational environments.
+          </p>
+          <p>
+            We help organizations make clear technical decisions, strengthen security posture, improve scalability,
+            and move modernization efforts forward with confidence.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#services">Explore Services</a>
+            <a class="btn" href="#experience">View Past Work</a>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <div class="panel-inner">
+            <p class="panel-title">Why clients engage Blackfire</p>
+            <ul class="panel-list">
+              <li><span class="dot"></span><span>Consulting grounded in direct experience across DoD, enterprise, and regulated environments.</span></li>
+              <li><span class="dot"></span><span>Strength in cybersecurity governance, RMF execution, and architecture-driven modernization.</span></li>
+              <li><span class="dot"></span><span>Practical recommendations shaped by real implementation work, not generic theory.</span></li>
+              <li><span class="dot"></span><span>Ability to bridge infrastructure, security, compliance, and custom technical solutions.</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="kicker">Services</div>
+        <h2 class="h2">Consulting services</h2>
+        <p class="lead">
+          Blackfire is positioned as a consulting partner for organizations that need experienced guidance across
+          cybersecurity, enterprise architecture, compliance, and modernization initiatives.
+        </p>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="badge">Cybersecurity</div>
+            <p class="name">Cybersecurity & Compliance Consulting</p>
+            <p>
+              RMF support, SSP and POA&amp;M development, vulnerability management, STIG and SCAP alignment,
+              security assessments, and audit-readiness support for regulated and mission-focused environments.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="badge">Architecture</div>
+            <p class="name">Enterprise Architecture & Modernization</p>
+            <p>
+              Secure enterprise design, modernization planning, technical roadmaps, infrastructure strategy,
+              and architecture decisions that align mission needs with security and operational reality.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="badge">Infrastructure</div>
+            <p class="name">Network & Infrastructure Strategy</p>
+            <p>
+              Consulting for routing, switching, firewalls, VPNs, segmentation, identity, hybrid infrastructure,
+              and secure multi-site enterprise environments.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="badge">Applications</div>
+            <p class="name">Application & Automation Advisory</p>
+            <p>
+              Guidance for custom applications, automation workflows, compliance tracking, operational dashboards,
+              and technical solutions that improve execution, visibility, and reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="section" id="highlights">
+      <div class="wrap">
+        <div class="kicker">Experience Highlights</div>
+        <h2 class="h2">Built on proven delivery</h2>
+        <p class="lead">
+          Blackfire’s consulting model is backed by direct experience leading and supporting real-world enterprise,
+          cybersecurity, compliance, and modernization efforts.
+        </p>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-inner">
+              <p class="panel-title">Selected accomplishments</p>
+              <ul class="bullets">
+                <li>Architected SCIENET, an industrial network supporting Industry 4.0 operations at Tinker AFB.</li>
+                <li>Designed ATHENA enterprise network architecture connecting multiple Air Force bases.</li>
+                <li>Led and supported RMF, NIST 800-53, and NIST 800-171 aligned compliance efforts.</li>
+                <li>Developed automation capabilities for cybersecurity monitoring and compliance operations.</li>
+                <li>Supported modernization initiatives that improved security posture, scalability, and operational resilience.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-inner">
+              <p class="panel-title">Core focus areas</p>
+              <ul class="bullets">
+                <li>Cybersecurity governance, risk, and compliance</li>
+                <li>Enterprise networking and secure infrastructure</li>
+                <li>Hybrid cloud and modernization planning</li>
+                <li>Security operations, logging, and monitoring strategy</li>
+                <li>Custom application and automation consulting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="kicker">Past Work</div>
+        <h2 class="h2">Professional experience</h2>
+        <p class="lead">
+          The work behind Blackfire reflects a blend of enterprise architecture, cybersecurity leadership,
+          compliance execution, and technical delivery across defense and commercial environments.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <p class="timeline-role">Solutions Architect / Senior Technical Consultant</p>
+                <p class="timeline-org">Muscogee Business Services</p>
+              </div>
+              <div class="timeline-date">Oct 2025 – Present</div>
+            </div>
+            <p>
+              Provides consulting across secure enterprise networking, RMF compliance, hybrid infrastructure,
+              modernization planning, custom application support, and technical advisory services for government
+              and commercial clients.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <p class="timeline-role">Enterprise Architect</p>
+                <p class="timeline-org">Delaware Nation Industries – Tinker AFB</p>
+              </div>
+              <div class="timeline-date">Apr 2024 – Oct 2025</div>
+            </div>
+            <p>
+              Led the design and development of the ATHENA Enterprise Network, connecting multiple Air Force bases
+              through a unified, secure, and scalable enterprise architecture aligned with DoD requirements.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <p class="timeline-role">Information Technology Specialist</p>
+                <p class="timeline-org">Department of Defense – Tinker AFB</p>
+              </div>
+              <div class="timeline-date">Mar 2020 – Apr 2024</div>
+            </div>
+            <p>
+              Designed, implemented, and optimized SCIENET, a secure industrial network enabling Industry 4.0
+              initiatives. Supported infrastructure security, operational resiliency, and compliance-driven delivery.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <p class="timeline-role">Software Developer</p>
+                <p class="timeline-org">Webco Industries</p>
+              </div>
+              <div class="timeline-date">May 2018 – Mar 2020</div>
+            </div>
+            <p>
+              Developed enterprise applications, databases, reports, and automation solutions using modern web,
+              SQL, and development platforms while supporting secure and scalable business systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials">
+      <div class="wrap">
+        <div class="kicker">Credentials</div>
+        <h2 class="h2">Certifications, education, and trust markers</h2>
+        <p class="lead">
+          Blackfire’s consulting approach is supported by technical depth, recognized certifications,
+          and experience operating in high-trust environments.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <p class="name">Certifications & Education</p>
+            <div class="credential-wrap" style="margin-top:14px">
+              <span class="credential">MSIT</span>
+              <span class="credential">CISSP</span>
+              <span class="credential">CGRC</span>
+              <span class="credential">PMP</span>
+              <span class="credential">CEH</span>
+              <span class="credential">GSLC</span>
+              <span class="credential">CCP</span>
+              <span class="credential">CCA</span>
+            </div>
+            <p style="margin-top:14px">
+              Master of Information Technology and Bachelor of Management Information Systems with a career foundation
+              spanning enterprise architecture, software development, cybersecurity, and compliance leadership.
+            </p>
+          </div>
+
+          <div class="card">
+            <p class="name">Engagement Focus</p>
+            <ul class="bullets" style="margin-top:14px">
+              <li>Strategic advisory and architecture review</li>
+              <li>Cybersecurity and compliance consulting</li>
+              <li>Assessment-driven recommendations and roadmaps</li>
+              <li>Modernization and transformation planning</li>
+              <li>Technical leadership for secure enterprise initiatives</li>
+              <li>Support for regulated, high-stakes, and mission-critical environments</li>
+            </ul>
+            <p style="margin-top:14px"><strong>Clearance:</strong> Top Secret</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="kicker">Contact</div>
+        <h2 class="h2">Start with a focused conversation</h2>
+        <p class="lead">
+          Whether you need support with cybersecurity, enterprise architecture, compliance, or modernization strategy,
+          Blackfire can help define the path forward.
+        </p>
+
+        <div class="contact-box">
+          <div class="grid-2">
+            <div>
+              <p class="panel-title">Direct contact</p>
+              <ul class="panel-list">
+                <li><span class="dot"></span><span><b>Email:</b> <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></span></li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="panel-title">Best fit engagements</p>
+              <ul class="panel-list">
+                <li><span class="dot"></span><span>Cybersecurity and compliance consulting</span></li>
+                <li><span class="dot"></span><span>Enterprise architecture and infrastructure strategy</span></li>
+                <li><span class="dot"></span><span>Modernization planning and technical assessments</span></li>
+                <li><span class="dot"></span><span>Application and automation advisory support</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <div style="font-weight:900;color:var(--text)">Blackfire Systems LLC</div>
+        <div style="color:var(--muted);margin-top:4px">Cybersecurity, Architecture, and Compliance Consulting</div>
+        <div style="margin-top:10px;font-size:12.5px">© <span id="y"></span> Blackfire Systems LLC. All rights reserved.</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:12.5px">Email: <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
