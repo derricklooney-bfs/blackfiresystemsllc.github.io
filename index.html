@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Content-Security-Policy" content="
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="
     default-src 'self';
     img-src 'self' data:;
     style-src 'self' 'unsafe-inline';
@@ -15,10 +16,10 @@
     frame-ancestors 'none';
     object-src 'none';
     upgrade-insecure-requests;
-  " />
-  <title>Blackfire Systems LLC — Cybersecurity, Architecture, and Compliance Consulting</title>
-  <meta name="description" content="Blackfire Systems LLC provides cybersecurity, enterprise architecture, compliance, and modernization consulting for regulated and mission-critical environments." />
-  <style>
+  " http-equiv="Content-Security-Policy"/>
+<title>Blackfire Systems LLC — Managed IT &amp; Cybersecurity Services</title>
+<meta content="Blackfire Systems LLC provides managed IT, managed cybersecurity, cloud, network, and compliance services for small and medium businesses." name="description"/>
+<style>
     :root{
       --bg:#070707;
       --panel:#0f0f12;
@@ -33,7 +34,7 @@
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%;scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -46,20 +47,20 @@
     }
 
     a{color:inherit}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
     .section{padding:72px 0;border-top:1px solid rgba(255,255,255,.06)}
 
     .topbar{
       position:sticky;top:0;z-index:50;
-      background: rgba(7,7,7,.72);
+      background: rgba(7,7,7,.76);
       backdrop-filter: blur(14px);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center;min-width:210px}
-    .brand-name{font-weight:800;letter-spacing:.4px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:18px}
+    .brand{display:flex;gap:12px;align-items:center;min-width:230px}
+    .brand-name{font-weight:900;letter-spacing:.4px}
     .brand-sub{font-size:12px;color:var(--muted);margin-top:1px}
-    .navlinks{display:flex;gap:16px;align-items:center}
+    .navlinks{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .navlinks a{
       text-decoration:none;
       font-size:13px;
@@ -75,20 +76,21 @@
     }
     .cta{
       text-decoration:none;
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
       padding:10px 12px;
       border-radius:12px;
       background: linear-gradient(135deg, rgba(212,60,44,.95), rgba(244,106,31,.95));
       border: 1px solid rgba(255,255,255,.15);
       box-shadow: 0 14px 35px rgba(212,60,44,.22);
+      white-space:nowrap;
     }
 
-    .hero{padding:64px 0 28px;border-top:none}
+    .hero{padding:70px 0 36px;border-top:none}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
     .hero h1{
-      font-size:44px;line-height:1.08;margin:0 0 14px;
-      letter-spacing:-.7px;
+      font-size:48px;line-height:1.06;margin:0 0 16px;
+      letter-spacing:-.9px;
     }
     .tagline{
       display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;
@@ -100,12 +102,12 @@
       padding:6px 10px;border-radius:999px;
       background:rgba(255,255,255,.03);
     }
-    .hero p{color:var(--muted);margin:0 0 18px;font-size:15px;max-width:66ch}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero p{color:var(--muted);margin:0 0 18px;font-size:15px;max-width:70ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     .btn{
       display:inline-flex;align-items:center;gap:10px;
       padding:12px 14px;border-radius:14px;
-      text-decoration:none;font-weight:800;font-size:14px;
+      text-decoration:none;font-weight:850;font-size:14px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.04);
     }
@@ -122,8 +124,8 @@
       box-shadow: var(--shadow);
       overflow:hidden;
     }
-    .panel-inner{padding:18px}
-    .panel-title{font-weight:900;letter-spacing:.2px;margin:0 0 10px}
+    .panel-inner{padding:20px}
+    .panel-title{font-weight:950;letter-spacing:.2px;margin:0 0 10px;font-size:18px}
     .panel-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
     .panel-list li{display:flex;gap:10px;color:var(--muted);font-size:13px}
     .dot{
@@ -134,13 +136,13 @@
 
     .kicker{
       color:var(--accent2);
-      font-weight:900;
+      font-weight:950;
       letter-spacing:.18em;
       font-size:11px;
       text-transform:uppercase
     }
-    .h2{font-size:28px;margin:10px 0 10px;letter-spacing:-.2px}
-    .lead{color:var(--muted);margin:0 0 22px;max-width:80ch}
+    .h2{font-size:30px;margin:10px 0 10px;letter-spacing:-.3px;line-height:1.15}
+    .lead{color:var(--muted);margin:0 0 24px;max-width:82ch}
 
     .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -152,11 +154,11 @@
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       box-shadow: 0 16px 40px rgba(0,0,0,.35);
     }
-    .card .name{font-weight:950;letter-spacing:.2px;margin:0 0 6px;font-size:18px}
+    .card .name{font-weight:950;letter-spacing:.2px;margin:0 0 7px;font-size:18px;line-height:1.2}
     .card p{color:var(--muted);font-size:13px;margin:0}
     .badge{
       display:inline-flex;align-items:center;gap:8px;
-      font-size:11.5px;font-weight:900;
+      font-size:11.5px;font-weight:950;
       padding:6px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.03);
@@ -164,39 +166,31 @@
       margin:0 0 10px;
     }
 
-    .timeline{display:grid;gap:14px}
-    .timeline-item{
-      padding:18px;border-radius:var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      box-shadow: 0 16px 40px rgba(0,0,0,.25);
-    }
-    .timeline-top{
-      display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap
-    }
-    .timeline-role{font-weight:900;font-size:18px;margin:0}
-    .timeline-org{color:#fff;margin:4px 0 0;font-size:14px}
-    .timeline-date{
-      font-size:12px;color:var(--muted);
-      border:1px solid rgba(255,255,255,.10);
-      padding:7px 10px;border-radius:999px;
-      background:rgba(255,255,255,.03);
-      white-space:nowrap;
-    }
-    .timeline-item p{color:var(--muted);font-size:13px;margin:12px 0 0}
-
     .bullets{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
     .bullets li{font-size:13px}
-
-    .credential-wrap{
-      display:flex;flex-wrap:wrap;gap:10px
-    }
+    .credential-wrap{display:flex;flex-wrap:wrap;gap:10px}
     .credential{
-      font-size:12px;font-weight:800;color:#fff;
+      font-size:12px;font-weight:850;color:#fff;
       padding:9px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.04);
     }
+
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
+    .plan{position:relative;display:flex;flex-direction:column;gap:14px}
+    .plan.popular{border-color:rgba(244,106,31,.45);box-shadow:0 20px 55px rgba(212,60,44,.22)}
+    .plan .name{font-size:22px;margin:0}
+    .plan-note{color:var(--muted);font-size:13px;margin:0;min-height:40px}
+    .price-note{font-size:12px;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);padding-top:12px;margin-top:auto}
+
+    .table-wrap{overflow:auto;border-radius:var(--radius);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;min-width:820px;background:rgba(255,255,255,.02)}
+    th,td{padding:13px 14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px;text-align:center;color:var(--muted)}
+    th{color:#fff;background:rgba(255,255,255,.04);font-weight:950}
+    td:first-child,th:first-child{text-align:left;color:#fff;font-weight:800}
+    tr:last-child td{border-bottom:none}
+    .check{color:#fff;font-weight:950}
+    .dash{color:rgba(255,255,255,.25)}
 
     .contact-box{
       padding:22px;border-radius:var(--radius);
@@ -211,335 +205,371 @@
     .footgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
 
     @media (max-width: 980px){
-      .hero-grid,.grid-4,.grid-3,.grid-2,.footgrid{grid-template-columns:1fr}
+      .hero-grid,.grid-4,.grid-3,.grid-2,.plans,.footgrid{grid-template-columns:1fr}
       .navlinks{display:none}
     }
     @media (max-width: 560px){
       .hero h1{font-size:34px}
+      .section{padding:54px 0}
+      .brand-sub{display:none}
     }
   </style>
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="wrap">
-      <div class="nav">
-        <div class="brand" aria-label="Blackfire Systems">
-          <img src="logo.png" alt="Blackfire Systems LLC logo" style="height:34px;width:auto;" />
-          <div>
-            <div class="brand-name">Blackfire Systems LLC</div>
-            <div class="brand-sub">Cybersecurity, Architecture, and Compliance Consulting</div>
-          </div>
-        </div>
-
-        <div class="navlinks" role="navigation" aria-label="Primary">
-          <a href="#services">Services</a>
-          <a href="#experience">Experience</a>
-          <a href="#credentials">Credentials</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <a class="cta" href="#contact">Schedule a Consultation</a>
-      </div>
-    </div>
-  </div>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero wrap" id="top">
-      <div class="hero-grid">
-        <div>
-          <div class="tagline">
-            <span class="tag-pill">Cybersecurity Consulting</span>
-            <span class="tag-pill">Enterprise Architecture</span>
-            <span class="tag-pill">Compliance & Modernization</span>
-          </div>
-          <h1>Practical consulting for secure, compliant, and mission-critical environments.</h1>
-          <p>
-            Blackfire Systems LLC provides consulting services focused on cybersecurity, enterprise architecture,
-            compliance, and modernization strategy. Our work is grounded in real-world delivery across defense,
-            enterprise infrastructure, secure networking, and compliance-driven operational environments.
+<div class="topbar">
+<div class="wrap">
+<div class="nav">
+<div aria-label="Blackfire Systems" class="brand">
+<img alt="Blackfire Systems LLC logo" src="logo.png" style="height:34px;width:auto;"/>
+<div>
+<div class="brand-name">Blackfire Systems LLC</div>
+<div class="brand-sub">Managed IT &amp; Cybersecurity Services</div>
+</div>
+</div>
+<div aria-label="Primary" class="navlinks" role="navigation">
+<a href="#services">Services</a>
+<a href="#plans">Plans</a>
+<a href="#support">Support Model</a>
+<a href="#tools">Technology</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="cta" href="#contact">Request an Assessment</a>
+</div>
+</div>
+</div>
+<main>
+<section class="hero wrap" id="top">
+<div class="hero-grid">
+<div>
+<div class="tagline">
+<span class="tag-pill">Managed IT</span>
+<span class="tag-pill">Managed Cybersecurity</span>
+<span class="tag-pill">Cloud &amp; Network Management</span>
+<span class="tag-pill">Compliance Support</span>
+</div>
+<h1>Enterprise-grade IT and cybersecurity for growing businesses.</h1>
+<p>
+            Blackfire Systems provides managed IT, cybersecurity, cloud, network, and compliance services for small and medium businesses that need reliable technology support without building a full internal IT department.
           </p>
-          <p>
-            We help organizations make clear technical decisions, strengthen security posture, improve scalability,
-            and move modernization efforts forward with confidence.
+<p>
+            We monitor your environment, maintain your systems, respond to security events, manage covered services, and help keep your business operating securely and efficiently.
           </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#services">Explore Services</a>
-            <a class="btn" href="#experience">View Past Work</a>
-          </div>
-        </div>
-
-        <aside class="panel">
-          <div class="panel-inner">
-            <p class="panel-title">Why clients engage Blackfire</p>
-            <ul class="panel-list">
-              <li><span class="dot"></span><span>Consulting grounded in direct experience across DoD, enterprise, and regulated environments.</span></li>
-              <li><span class="dot"></span><span>Strength in cybersecurity governance, RMF execution, and architecture-driven modernization.</span></li>
-              <li><span class="dot"></span><span>Practical recommendations shaped by real implementation work, not generic theory.</span></li>
-              <li><span class="dot"></span><span>Ability to bridge infrastructure, security, compliance, and custom technical solutions.</span></li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section" id="services">
-      <div class="wrap">
-        <div class="kicker">Services</div>
-        <h2 class="h2">Consulting services</h2>
-        <p class="lead">
-          Blackfire is positioned as a consulting partner for organizations that need experienced guidance across
-          cybersecurity, enterprise architecture, compliance, and modernization initiatives.
+<div class="hero-actions">
+<a class="btn primary" href="#plans">View Managed Plans</a>
+<a class="btn" href="#contact">Schedule a Fit Call</a>
+</div>
+</div>
+<aside class="panel">
+<div class="panel-inner">
+<p class="panel-title">Built for small and medium businesses</p>
+<ul class="panel-list">
+<li><span class="dot"></span><span>Proactive monitoring and maintenance without unlimited 24/7 help desk commitments.</span></li>
+<li><span class="dot"></span><span>Security-first managed services powered by Blackpoint Cyber, Atera, and Securden.</span></li>
+<li><span class="dot"></span><span>Support for endpoints, Microsoft 365, cloud platforms, firewalls, switches, wireless, and VPNs.</span></li>
+<li><span class="dot"></span><span>Compliance support for organizations with CMMC, NIST, HIPAA, PCI DSS, CIS, or CJIS requirements.</span></li>
+</ul>
+</div>
+</aside>
+</div>
+</section>
+<section class="section" id="services">
+<div class="wrap">
+<div class="kicker">Services</div>
+<h2 class="h2">Managed services that cover the full business environment</h2>
+<p class="lead">
+          Blackfire is positioned as a security-first MSP/MSSP. We manage the technology your business depends on, protect users and endpoints, and support the cloud and physical network environments already in place.
         </p>
-
-        <div class="grid-4">
-          <div class="card">
-            <div class="badge">Cybersecurity</div>
-            <p class="name">Cybersecurity & Compliance Consulting</p>
-            <p>
-              RMF support, SSP and POA&amp;M development, vulnerability management, STIG and SCAP alignment,
-              security assessments, and audit-readiness support for regulated and mission-focused environments.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="badge">Architecture</div>
-            <p class="name">Enterprise Architecture & Modernization</p>
-            <p>
-              Secure enterprise design, modernization planning, technical roadmaps, infrastructure strategy,
-              and architecture decisions that align mission needs with security and operational reality.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="badge">Infrastructure</div>
-            <p class="name">Network & Infrastructure Strategy</p>
-            <p>
-              Consulting for routing, switching, firewalls, VPNs, segmentation, identity, hybrid infrastructure,
-              and secure multi-site enterprise environments.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="badge">Applications</div>
-            <p class="name">Application & Automation Advisory</p>
-            <p>
-              Guidance for custom applications, automation workflows, compliance tracking, operational dashboards,
-              and technical solutions that improve execution, visibility, and reporting.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HIGHLIGHTS -->
-    <section class="section" id="highlights">
-      <div class="wrap">
-        <div class="kicker">Experience Highlights</div>
-        <h2 class="h2">Built on proven delivery</h2>
-        <p class="lead">
-          Blackfire’s consulting model is backed by direct experience leading and supporting real-world enterprise,
-          cybersecurity, compliance, and modernization efforts.
+<div class="grid-3">
+<div class="card">
+<div class="badge">Managed IT</div>
+<p class="name">Endpoint &amp; Systems Management</p>
+<p>Remote monitoring, patching, software deployment, asset tracking, endpoint protection, maintenance, and operational support for covered devices.</p>
+</div>
+<div class="card">
+<div class="badge">Cybersecurity</div>
+<p class="name">Managed Security Operations</p>
+<p>Managed MDR, SIEM, threat hunting, security monitoring, vulnerability management, and security event response aligned to your selected plan.</p>
+</div>
+<div class="card">
+<div class="badge">Cloud</div>
+<p class="name">Cloud Service Management</p>
+<p>Administration and support for Microsoft 365, Azure, AWS, Google Cloud, Google Workspace, Entra ID, Intune, SharePoint, Teams, and related services.</p>
+</div>
+<div class="card">
+<div class="badge">Network</div>
+<p class="name">Physical Network Management</p>
+<p>Firewall, VPN, switch, VLAN, wireless, routing, ISP failover, branch connectivity, and network monitoring support for covered environments.</p>
+</div>
+<div class="card">
+<div class="badge">PAM</div>
+<p class="name">Privileged Access Management</p>
+<p>Password vaulting, privileged account control, just-in-time access, credential rotation, session auditing, and secure administrator access.</p>
+</div>
+<div class="card">
+<div class="badge">Compliance</div>
+<p class="name">Security &amp; Compliance Support</p>
+<p>CMMC, NIST 800-171, NIST CSF, HIPAA, PCI DSS, CIS Controls, CJIS, security policy support, audit preparation, and documentation assistance.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="plans">
+<div class="wrap">
+<div class="kicker">Managed Service Plans</div>
+<h2 class="h2">Choose the level of coverage your business needs</h2>
+<p class="lead">
+          Plans are built around proactive monitoring, managed maintenance, and as-needed support for covered services. Projects, major upgrades, after-hours work, on-site service, and out-of-scope requests are quoted separately.
         </p>
-
-        <div class="grid-2">
-          <div class="panel">
-            <div class="panel-inner">
-              <p class="panel-title">Selected accomplishments</p>
-              <ul class="bullets">
-                <li>Architected SCIENET, an industrial network supporting Industry 4.0 operations at Tinker AFB.</li>
-                <li>Designed ATHENA enterprise network architecture connecting multiple Air Force bases.</li>
-                <li>Led and supported RMF, NIST 800-53, and NIST 800-171 aligned compliance efforts.</li>
-                <li>Developed automation capabilities for cybersecurity monitoring and compliance operations.</li>
-                <li>Supported modernization initiatives that improved security posture, scalability, and operational resilience.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-inner">
-              <p class="panel-title">Core focus areas</p>
-              <ul class="bullets">
-                <li>Cybersecurity governance, risk, and compliance</li>
-                <li>Enterprise networking and secure infrastructure</li>
-                <li>Hybrid cloud and modernization planning</li>
-                <li>Security operations, logging, and monitoring strategy</li>
-                <li>Custom application and automation consulting</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="wrap">
-        <div class="kicker">Past Work</div>
-        <h2 class="h2">Professional experience</h2>
-        <p class="lead">
-          The work behind Blackfire reflects a blend of enterprise architecture, cybersecurity leadership,
-          compliance execution, and technical delivery across defense and commercial environments.
+<div class="plans">
+<div class="card plan">
+<div class="badge">Foundation</div>
+<p class="name">Essential</p>
+<p class="plan-note">For businesses that need reliable endpoint management and proactive IT maintenance.</p>
+<ul class="bullets">
+<li>Remote monitoring and management</li>
+<li>Patch management</li>
+<li>Software deployment</li>
+<li>Asset management</li>
+<li>Endpoint protection</li>
+<li>Scheduled maintenance</li>
+<li>Monthly health reporting</li>
+</ul>
+<p class="price-note">Best for small teams that need devices monitored, patched, and maintained.</p>
+</div>
+<div class="card plan popular">
+<div class="badge">Most Popular</div>
+<p class="name">Professional</p>
+<p class="plan-note">For businesses that need managed IT operations, cybersecurity, cloud, and network support.</p>
+<ul class="bullets">
+<li>Everything in Essential</li>
+<li>Microsoft 365 administration</li>
+<li>User onboarding and offboarding</li>
+<li>Blackpoint Cyber MDR</li>
+<li>Managed SIEM</li>
+<li>Threat hunting</li>
+<li>Vulnerability management</li>
+<li>Cloud service management</li>
+<li>Firewall, VPN, switch, and wireless management</li>
+<li>Backup monitoring</li>
+</ul>
+<p class="price-note">Best for growing businesses that want IT and cybersecurity managed together.</p>
+</div>
+<div class="card plan">
+<div class="badge">Advanced</div>
+<p class="name">Enterprise</p>
+<p class="plan-note">For organizations with advanced security, privileged access, or compliance requirements.</p>
+<ul class="bullets">
+<li>Everything in Professional</li>
+<li>Securden Unified PAM</li>
+<li>Compliance support</li>
+<li>CMMC readiness</li>
+<li>NIST 800-171 support</li>
+<li>HIPAA, PCI DSS, CIS, and CJIS support</li>
+<li>Security policy assistance</li>
+<li>Incident response planning</li>
+<li>Compliance documentation assistance</li>
+<li>Priority response</li>
+</ul>
+<p class="price-note">Best for regulated businesses and organizations with higher security requirements.</p>
+</div>
+</div>
+<div style="height:18px"></div>
+<div aria-label="Managed service plan comparison" class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Essential</th>
+<th>Professional</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Remote Monitoring &amp; Management</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Patch Management</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Software Deployment</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Asset Management</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Endpoint Protection</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Microsoft 365 Administration</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>User Onboarding &amp; Offboarding</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Blackpoint MDR</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Blackpoint Managed SIEM</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Threat Hunting</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Vulnerability Management</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Cloud Management</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Firewall / VPN / Switch / Wireless Management</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Backup Monitoring</td><td class="dash">—</td><td class="check">✔</td><td class="check">✔</td></tr>
+<tr><td>Securden Unified PAM</td><td class="dash">—</td><td class="dash">—</td><td class="check">✔</td></tr>
+<tr><td>Compliance Support</td><td class="dash">—</td><td class="dash">—</td><td class="check">✔</td></tr>
+<tr><td>Incident Response Planning</td><td class="dash">—</td><td class="dash">—</td><td class="check">✔</td></tr>
+<tr><td>Priority Response</td><td class="dash">—</td><td class="dash">—</td><td class="check">✔</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="section" id="support">
+<div class="wrap">
+<div class="kicker">Support Model</div>
+<h2 class="h2">Proactive monitoring, scheduled support, and clear scope</h2>
+<p class="lead">
+          Blackfire managed service plans are not sold as unlimited 24/7 help desk access. The model is built around monitoring, preventative maintenance, scheduled administration, and support as needed for covered services.
         </p>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <p class="timeline-role">Solutions Architect / Senior Technical Consultant</p>
-                <p class="timeline-org">Muscogee Business Services</p>
-              </div>
-              <div class="timeline-date">Oct 2025 – Present</div>
-            </div>
-            <p>
-              Provides consulting across secure enterprise networking, RMF compliance, hybrid infrastructure,
-              modernization planning, custom application support, and technical advisory services for government
-              and commercial clients.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <p class="timeline-role">Enterprise Architect</p>
-                <p class="timeline-org">Delaware Nation Industries – Tinker AFB</p>
-              </div>
-              <div class="timeline-date">Apr 2024 – Oct 2025</div>
-            </div>
-            <p>
-              Led the design and development of the ATHENA Enterprise Network, connecting multiple Air Force bases
-              through a unified, secure, and scalable enterprise architecture aligned with DoD requirements.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <p class="timeline-role">Information Technology Specialist</p>
-                <p class="timeline-org">Department of Defense – Tinker AFB</p>
-              </div>
-              <div class="timeline-date">Mar 2020 – Apr 2024</div>
-            </div>
-            <p>
-              Designed, implemented, and optimized SCIENET, a secure industrial network enabling Industry 4.0
-              initiatives. Supported infrastructure security, operational resiliency, and compliance-driven delivery.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <p class="timeline-role">Software Developer</p>
-                <p class="timeline-org">Webco Industries</p>
-              </div>
-              <div class="timeline-date">May 2018 – Mar 2020</div>
-            </div>
-            <p>
-              Developed enterprise applications, databases, reports, and automation solutions using modern web,
-              SQL, and development platforms while supporting secure and scalable business systems.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CREDENTIALS -->
-    <section class="section" id="credentials">
-      <div class="wrap">
-        <div class="kicker">Credentials</div>
-        <h2 class="h2">Certifications, education, and trust markers</h2>
-        <p class="lead">
-          Blackfire’s consulting approach is supported by technical depth, recognized certifications,
-          and experience operating in high-trust environments.
+<div class="grid-2">
+<div class="panel">
+<div class="panel-inner">
+<p class="panel-title">Included support focuses on</p>
+<ul class="panel-list">
+<li><span class="dot"></span><span>Continuous platform monitoring and alert review.</span></li>
+<li><span class="dot"></span><span>Security event response based on plan coverage.</span></li>
+<li><span class="dot"></span><span>Routine patching, maintenance, and administration.</span></li>
+<li><span class="dot"></span><span>Ticket-based remote support for covered services.</span></li>
+<li><span class="dot"></span><span>Scheduled changes such as onboarding, offboarding, account updates, and configuration changes.</span></li>
+</ul>
+</div>
+</div>
+<div class="panel">
+<div class="panel-inner">
+<p class="panel-title">Quoted separately when needed</p>
+<ul class="panel-list">
+<li><span class="dot"></span><span>After-hours support and emergency support outside the selected plan.</span></li>
+<li><span class="dot"></span><span>Major upgrades, migrations, new deployments, and one-time projects.</span></li>
+<li><span class="dot"></span><span>On-site service, cabling, hardware installation, and physical remediation work.</span></li>
+<li><span class="dot"></span><span>Out-of-scope support requests or excessive ad hoc support needs.</span></li>
+<li><span class="dot"></span><span>Incident response work beyond normal monitoring and triage.</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="tools">
+<div class="wrap">
+<div class="kicker">Technology Stack</div>
+<h2 class="h2">Tools and environments we manage</h2>
+<p class="lead">
+          Blackfire uses proven managed service and security platforms while supporting the cloud providers, Microsoft services, and physical network equipment your business already uses.
         </p>
+<div class="grid-2">
+<div class="card">
+<p class="name">Core managed service stack</p>
+<div class="credential-wrap" style="margin-top:14px">
+<span class="credential">Atera</span>
+<span class="credential">Blackpoint Cyber MDR</span>
+<span class="credential">Blackpoint Managed SIEM</span>
+<span class="credential">Securden Unified PAM</span>
+<span class="credential">Microsoft Defender</span>
+<span class="credential">Microsoft Intune</span>
+<span class="credential">Microsoft Entra ID</span>
+</div>
+</div>
+<div class="card">
+<p class="name">Platforms and infrastructure</p>
+<div class="credential-wrap" style="margin-top:14px">
+<span class="credential">Microsoft 365</span>
+<span class="credential">Azure</span>
+<span class="credential">AWS</span>
+<span class="credential">Google Cloud</span>
+<span class="credential">Google Workspace</span>
+<span class="credential">Cisco</span>
+<span class="credential">Fortinet</span>
+<span class="credential">Palo Alto</span>
+<span class="credential">Ubiquiti</span>
+<span class="credential">Meraki</span>
+<span class="credential">Aruba</span>
+<span class="credential">VMware</span>
+<span class="credential">Hyper-V</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-        <div class="grid-2">
-          <div class="card">
-            <p class="name">Certifications & Education</p>
-            <div class="credential-wrap" style="margin-top:14px">
-              <span class="credential">MSIT</span>
-              <span class="credential">CISSP</span>
-              <span class="credential">CGRC</span>
-              <span class="credential">PMP</span>
-              <span class="credential">CEH</span>
-              <span class="credential">GSLC</span>
-              <span class="credential">CCP</span>
-              <span class="credential">CCA</span>
-            </div>
-            <p style="margin-top:14px">
-              Master of Information Technology and Bachelor of Management Information Systems with a career foundation
-              spanning enterprise architecture, software development, cybersecurity, and compliance leadership.
-            </p>
-          </div>
-
-          <div class="card">
-            <p class="name">Engagement Focus</p>
-            <ul class="bullets" style="margin-top:14px">
-              <li>Strategic advisory and architecture review</li>
-              <li>Cybersecurity and compliance consulting</li>
-              <li>Assessment-driven recommendations and roadmaps</li>
-              <li>Modernization and transformation planning</li>
-              <li>Technical leadership for secure enterprise initiatives</li>
-              <li>Support for regulated, high-stakes, and mission-critical environments</li>
-            </ul>
-            <p style="margin-top:14px"><strong>Clearance:</strong> Top Secret</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="kicker">Contact</div>
-        <h2 class="h2">Start with a focused conversation</h2>
-        <p class="lead">
-          Whether you need support with cybersecurity, enterprise architecture, compliance, or modernization strategy,
-          Blackfire can help define the path forward.
+<section class="section" id="why">
+<div class="wrap">
+<div class="kicker">Why Blackfire</div>
+<h2 class="h2">Security-first managed services with real enterprise experience</h2>
+<p class="lead">
+          Blackfire combines managed IT operations with cybersecurity, enterprise architecture, compliance, and infrastructure experience across regulated and mission-critical environments.
         </p>
-
-        <div class="contact-box">
-          <div class="grid-2">
-            <div>
-              <p class="panel-title">Direct contact</p>
-              <ul class="panel-list">
-                <li><span class="dot"></span><span><b>Email:</b> <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></span></li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="panel-title">Best fit engagements</p>
-              <ul class="panel-list">
-                <li><span class="dot"></span><span>Cybersecurity and compliance consulting</span></li>
-                <li><span class="dot"></span><span>Enterprise architecture and infrastructure strategy</span></li>
-                <li><span class="dot"></span><span>Modernization planning and technical assessments</span></li>
-                <li><span class="dot"></span><span>Application and automation advisory support</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footgrid">
-      <div>
-        <div style="font-weight:900;color:var(--text)">Blackfire Systems LLC</div>
-        <div style="color:var(--muted);margin-top:4px">Cybersecurity, Architecture, and Compliance Consulting</div>
-        <div style="margin-top:10px;font-size:12.5px">© <span id="y"></span> Blackfire Systems LLC. All rights reserved.</div>
-      </div>
-      <div style="text-align:right">
-        <div style="font-size:12.5px">Email: <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+<div class="grid-2">
+<div class="panel">
+<div class="panel-inner">
+<p class="panel-title">Why businesses choose Blackfire</p>
+<ul class="bullets">
+<li>One partner for endpoints, cloud, cybersecurity, compliance, and network management.</li>
+<li>Security-first approach instead of basic break-fix IT support.</li>
+<li>Experience with Microsoft 365, Azure, Intune, Defender, Sentinel, Entra ID, CMMC, NIST, and enterprise networks.</li>
+<li>Clear support boundaries that keep monthly service predictable and sustainable.</li>
+<li>Practical recommendations shaped by real implementation work.</li>
+</ul>
+</div>
+</div>
+<div class="panel">
+<div class="panel-inner">
+<p class="panel-title">Credentials and trust markers</p>
+<div class="credential-wrap" style="margin-top:14px">
+<span class="credential">MSIT</span>
+<span class="credential">CISSP</span>
+<span class="credential">CGRC</span>
+<span class="credential">PMP</span>
+<span class="credential">CEH</span>
+<span class="credential">GSLC</span>
+<span class="credential">CCP</span>
+<span class="credential">CCA</span>
+</div>
+<p style="margin-top:14px;color:var(--muted);font-size:13px">
+                Background in cybersecurity, compliance, enterprise architecture, software development, secure infrastructure, and regulated technical environments.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="wrap">
+<div class="kicker">Contact</div>
+<h2 class="h2">Start with a focused assessment</h2>
+<p class="lead">
+          Tell us what you need managed: endpoints, Microsoft 365, cloud services, cybersecurity, network equipment, compliance, or the full environment. Blackfire will help define the right level of coverage.
+        </p>
+<div class="contact-box">
+<div class="grid-2">
+<div>
+<p class="panel-title">Direct contact</p>
+<ul class="panel-list">
+<li><span class="dot"></span><span><b>Email:</b> <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></span></li>
+</ul>
+</div>
+<div>
+<p class="panel-title">Best fit engagements</p>
+<ul class="panel-list">
+<li><span class="dot"></span><span>Managed IT and endpoint management</span></li>
+<li><span class="dot"></span><span>Managed cybersecurity and monitoring</span></li>
+<li><span class="dot"></span><span>Cloud and Microsoft 365 administration</span></li>
+<li><span class="dot"></span><span>Network, firewall, VPN, and wireless management</span></li>
+<li><span class="dot"></span><span>Compliance and security documentation support</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap footgrid">
+<div>
+<div style="font-weight:900;color:var(--text)">Blackfire Systems LLC</div>
+<div style="color:var(--muted);margin-top:4px">Managed IT, Cybersecurity, Cloud, Network, and Compliance Services</div>
+<div style="margin-top:10px;font-size:12.5px">© <span id="y"></span> Blackfire Systems LLC. All rights reserved.</div>
+</div>
+<div style="text-align:right">
+<div style="font-size:12.5px">Email: <a href="mailto:derrick.looney@blackfiresystemsllc.com">derrick.looney@blackfiresystemsllc.com</a></div>
+</div>
+</div>
+</footer>
+<script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
